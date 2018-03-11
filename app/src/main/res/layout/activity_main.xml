@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background2"
     tools:context="com.foxhound.rideon.MainActivity">
 
 
@@ -57,9 +57,10 @@
     <LinearLayout
         android:orientation="horizontal"
         android:weightSum="2"
+        android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
         android:layout_above="@id/txt_rider_app"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
 
@@ -75,7 +76,7 @@
             android:id="@+id/btnRegister"
             android:text="REGISTER"
             android:textColor="@android:color/white"
-            android:layout_marginRight="6dp"
+            android:layout_marginLeft="6dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
