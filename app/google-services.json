@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "349033599773",
+    "firebase_url": "https://rideon-1.firebaseio.com",
+    "project_id": "rideon-1",
+    "storage_bucket": "rideon-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:349033599773:android:c81c5512e387ea59",
+        "android_client_info": {
+          "package_name": "com.foxhound.rideon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "349033599773-cn6m8faajngg440e3jicl398ce7mu5pp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.foxhound.rideon",
+            "certificate_hash": "7af2f43a0b6fed63953345bae8e5cee703c20927"
+          }
+        },
+        {
+          "client_id": "349033599773-73qt439apsdmdl2ij1ude41ssduddigl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsFRp4n50zN6eL57isBlgw4I1MoQPRaes"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "349033599773-73qt439apsdmdl2ij1ude41ssduddigl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
