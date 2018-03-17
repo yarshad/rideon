@@ -240,7 +240,7 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
         try{
 
             String requestApi = "https://maps.googleapis.com/maps/api/directions/json?" +
-                    "mode=diriving&" +
+                    "mode=driving&" +
                     "transit_routing_preference=less_driving&" +
                     "origin="+currentPosition.latitude + "," + currentPosition.longitude + "&" +
                     "destination="+destination+"&" +
@@ -286,7 +286,6 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
                             blackPolyLineOptions.startCap(new SquareCap());
                             blackPolyLineOptions.endCap(new SquareCap());
                             blackPolyLineOptions.jointType(JointType.ROUND);
-                            blackPolyLineOptions.addAll(polyLineList);
                             blackPolyLine = mMap.addPolyline(blackPolyLineOptions);
 
 
