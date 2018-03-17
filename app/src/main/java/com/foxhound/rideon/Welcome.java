@@ -506,8 +506,6 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
                         //move camera to this position
                         mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(latitude,longitude),15.0f));
 
-
-
                     }
                 });
 
