@@ -123,7 +123,7 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
                     carMarker.setPosition(newPosition);
                     carMarker.setAnchor(0.5f,0.5f);
                     carMarker.setRotation(getBearing(startPosition,newPosition));
-                    mMap.moveCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder().target(newPosition).zoom(5.5f).build()));
+                    mMap.moveCamera(CameraUpdateFactory.newCameraPosition(new CameraPosition.Builder().target(newPosition).zoom(15.5f).build()));
                 }
             });
 
@@ -267,6 +267,7 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
                         //Adjusting bounds
                         LatLngBounds.Builder builder = new LatLngBounds.Builder();
                         for(LatLng latLng:polyLineList){
+                            builder.include(latLng);
                             LatLngBounds bounds = builder.build();
                             CameraUpdate mCameraUpdate = CameraUpdateFactory.newLatLngBounds(bounds,2);
                             mMap.animateCamera(mCameraUpdate);
@@ -517,34 +518,6 @@ public class Welcome extends FragmentActivity implements OnMapReadyCallback, Goo
             Log.d("ERROR", "Cannot get your location");
         }
     }
-
-
-    private void rotateMarker(final Marker mCurrent, final int i, GoogleMap mMap) {
-
-        final Handler handler = new Handler();
-        final long start = SystemClock.uptimeMillis();
-        final float startRotation = mCurrent.getRotation();
-        final long duration = 1500;
-        final Interpolator interpolator = new LinearInterpolator();
-
-
-        handler.post(new Runnable() {
-            @Override
-            public void run() {
-                long elapsed = SystemClock.uptimeMillis() - start;
-                float t = interpolator.getInterpolation((float) elapsed/duration);
-
-                float rotate = t* i+(1-t)* startRotation ;
-                mCurrent.setRotation(-rotate > 180?rotate/2:rotate);
-
-                if(t < 1.0){
-                    handler.postDelayed(this,16);
-                }
-            }
-        });
-
-    }
-
 
     private void startLocationUpdates() {
 
